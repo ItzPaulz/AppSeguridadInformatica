@@ -2,11 +2,9 @@ export const topics = [
   {
     id: 1,
     title: "Contraseñas Fuertes",
-    description: "Aprende a crear contraseñas que nadie pueda adivinar.",
+    description: "Aprende a crear contraseñas que nadie pueda adivinar. Para crear una Contraseña fuerte, usa al menos 8 caracteres, combina letras mayúsculas y minúsculas, números y símbolos especiales.",
     ageGroup: ["niños", "jovenes", "adultos"],
-    videoUrl: "https://www.youtube.com/embed/s_J4-2e2222",
-    animation: "password-animation",
-    graphic: "password-graphic",
+    
   },
   {
     id: 2,
@@ -29,11 +27,9 @@ export const topics = [
   {
     id: 4,
     title: "Cuidado con los Desconocidos Online",
-    description: "No confíes en extraños en internet, ¡protégete!",
+    description: "No confíes en extraños en internet, ¡protégete!, , no confies ni des información muy personal o privada a desconocidos, vamos a Jugar y probemos que tanto sabes sobre no dar información a desconocidos!",
     ageGroup: ["niños", "jovenes"],
-    videoUrl: "https://www.youtube.com/embed/s_J4-2e2222",
-    animation: "stranger-danger-animation",
-    graphic: "stranger-danger-graphic",
+
   },
   {
     id: 5,
@@ -270,3 +266,5 @@ export const topics = [
     graphic: "netiquette-graphic",
   },
 ];
+
+// DONE
