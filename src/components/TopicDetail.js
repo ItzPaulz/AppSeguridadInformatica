@@ -1,8 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import MiniGamePassword from './MiniGamePassword';
 import MiniGameStrangerDanger from './MiniGameStrangerDanger';
 
 const TopicDetail = ({ topic, onBack }) => {
+  const [iframeError, setIframeError] = useState(false);
+
   if (!topic) {
     return null;
   }
@@ -33,16 +35,66 @@ const TopicDetail = ({ topic, onBack }) => {
 
         {topic.videoUrl && (
           <div className="mb-6 rounded-xl overflow-hidden shadow-md relative group">
+            {!iframeError ? (
+              <iframe
+                className="w-full aspect-video transform transition-transform duration-500 group-hover:scale-105"
+                src={topic.videoUrl}
+                title={topic.title}
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                sandbox="allow-scripts allow-same-origin allow-presentation allow-popups"
+                onError={() => setIframeError(true)}
+              ></iframe>
+            ) : (
+              <div className="w-full aspect-video flex flex-col items-center justify-center bg-gray-200">
+                <span className="text-gray-700 mb-2">No se pudo cargar el video aquí.</span>
+                <a
+                  href={topic.videoUrl.replace('/embed/', '/watch?v=')}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition-colors"
+                >
+                  Abrir en YouTube
+                </a>
+              </div>
+            )}
+            {!iframeError && (
+              <div className="flex justify-center mt-2">
+                <a
+                  href={topic.videoUrl.replace('/embed/', '/watch?v=')}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition-colors"
+                >
+                  Abrir en YouTube
+                </a>
+              </div>
+            )}
+          </div>
+        )}
+
+        {/* Mostrar segundo video si existe */}
+        {topic.videoUrl1 && (
+          <div className="mb-6 rounded-xl overflow-hidden shadow-md relative group">
             <iframe
               className="w-full aspect-video transform transition-transform duration-500 group-hover:scale-105"
-              src={topic.videoUrl}
-              title={topic.title}
+              src={topic.videoUrl1}
+              title={topic.title + " (2)"}
               frameBorder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
+              sandbox="allow-scripts allow-same-origin allow-presentation allow-popups"
             ></iframe>
-            <div className="absolute inset-0 bg-blue-500 bg-opacity-20 opacity-0 group-hover:opacity-100 transition-opacity duration-500 flex items-center justify-center">
-              <span className="text-white text-xl font-bold drop-shadow-lg">¡Video Interactivo!</span>
+            <div className="flex justify-center mt-2">
+              <a
+                href={topic.videoUrl1.replace('/embed/', '/watch?v=')}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700 transition-colors"
+              >
+                Abrir en YouTube
+              </a>
             </div>
           </div>
         )}
@@ -62,16 +114,23 @@ const TopicDetail = ({ topic, onBack }) => {
           <div className="mb-6 p-4 bg-green-50 rounded-xl text-center border border-green-200 shadow-inner">
             <h3 className="text-xl font-semibold text-green-700 mb-2">Gráfico Explicativo</h3>
             <p className="text-green-600">Aquí iría el gráfico de {topic.graphic}.</p>
-            {/* Placeholder para el gráfico */}
-            <div className="w-full h-32 bg-green-200 rounded-lg flex items-center justify-center text-green-800 text-sm mt-2">
-              [Espacio para gráfico de {topic.graphic}]
-            </div>
+            {/* Mostrar imagen si es una URL válida */}
+            {topic.graphic.match(/\.(jpeg|jpg|gif|png|svg|webp)$/i) ? (
+              <img
+                src={topic.graphic}
+                alt="Gráfico explicativo"
+                className="w-full max-h-64 object-contain rounded-lg mx-auto mt-2"
+              />
+            ) : (
+              <div className="w-full h-32 bg-green-200 rounded-lg flex items-center justify-center text-green-800 text-sm mt-2">
+                [Espacio para gráfico de {topic.graphic}]
+              </div>
+            )}
           </div>
         )}
 
         {isKidTopic && (
           <div className="mt-8 p-4 bg-indigo-50 rounded-xl shadow-inner border border-indigo-200">
-            <h3 className="text-2xl font-bold text-indigo-800 mb-4 text-center">¡Hora de Jugar!</h3>
             {topic.id === 1 && <MiniGamePassword onComplete={handleGameComplete} />}
             {topic.id === 4 && <MiniGameStrangerDanger onComplete={handleGameComplete} />}
             {/* Agrega más minijuegos aquí según el topic.id */}
