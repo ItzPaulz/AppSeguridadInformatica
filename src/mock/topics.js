@@ -86,11 +86,9 @@ export const topics = [
   {
     id: 11,
     title: "Ciberacoso",
-    description: "Qué hacer si eres víctima de acoso en línea.",
+    description:
+      "Qué hacer si eres víctima de acoso en línea, que acciones debes tomar en cuenta",
     ageGroup: ["niños", "jovenes"],
-    videoUrl: "https://www.youtube.com/embed/s_J4-2e2222",
-    animation: "cyberbullying-animation",
-    graphic: "cyberbullying-graphic",
   },
   {
     id: 12,

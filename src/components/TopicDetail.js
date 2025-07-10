@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import MiniGamePassword from "./MiniGamePassword";
 import MiniGameStrangerDanger from "./MiniGameStrangerDanger";
-import CloudSecurityGames from "./CloudSecurityGame";
+import CloudSecurityGame from "./CloudSecurityGame";
 import MiniGamePasswordManager from "./MiniGameManagerPassword";
+import MiniGameCyberbullying from "./MiniGameCyberbullying";
 
 const TopicDetail = ({ topic, onBack }) => {
   const [iframeError, setIframeError] = useState(false);
@@ -177,10 +178,13 @@ const TopicDetail = ({ topic, onBack }) => {
         {isYoungTopic && (
           <div className="mt-8 p-4 bg-indigo-50 rounded-xl shadow-inner border border-indigo-200">
             {topic.id === 29 && (
-              <CloudSecurityGames onComplete={handleGameComplete} />
+              <CloudSecurityGame onComplete={handleGameComplete} />
             )}
             {topic.id === 24 && (
               <MiniGamePasswordManager onComplete={handleGameComplete} />
+            )}
+            {topic.id === 11 && (
+              <MiniGameCyberbullying onComplete={handleGameComplete} />
             )}
           </div>
         )}
