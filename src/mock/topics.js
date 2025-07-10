@@ -2,36 +2,38 @@ export const topics = [
   {
     id: 1,
     title: "Contraseñas Fuertes",
-    description: "Aprende a crear contraseñas que nadie pueda adivinar. Para crear una Contraseña fuerte, usa al menos 8 caracteres, combina letras mayúsculas y minúsculas, números y símbolos especiales.",
+    description:
+      "Aprende a crear contraseñas que nadie pueda adivinar. Para crear una Contraseña fuerte, usa al menos 8 caracteres, combina letras mayúsculas y minúsculas, números y símbolos especiales.",
     ageGroup: ["niños", "jovenes", "adultos"],
-    
   },
   {
     id: 2,
     title: "Phishing: ¡No Caigas!",
-    description: "Phishing es una técnica de fraude digital en la que los atacantes se hacen pasar por personas, empresas o instituciones confiables a través de correos electrónicos, mensajes de texto o sitios web falsos. Su objetivo es engañarte para que reveles información personal como contraseñas, números de tarjetas o datos bancarios. Estos mensajes suelen parecer legítimos, pero pueden contener errores sutiles o enlaces que te llevan a sitios web falsos. También pueden incluir amenazas o urgencias para presionarte a actuar rápidamente sin pensar.",
+    description:
+      "Phishing es una técnica de fraude digital en la que los atacantes se hacen pasar por personas, empresas o instituciones confiables a través de correos electrónicos, mensajes de texto o sitios web falsos. Su objetivo es engañarte para que reveles información personal como contraseñas, números de tarjetas o datos bancarios. Estos mensajes suelen parecer legítimos, pero pueden contener errores sutiles o enlaces que te llevan a sitios web falsos. También pueden incluir amenazas o urgencias para presionarte a actuar rápidamente sin pensar.",
     ageGroup: ["niños", "jovenes", "adultos"],
     videoUrl: "https://www.youtube.com/embed/UuuAlP7ay6U",
-    
   },
   {
     id: 3,
     title: "Privacidad en Redes Sociales",
-    description: "Configura tu privacidad para compartir solo lo que quieres, ten cuidado que compartes y donde lo compartes, ya que hay personas maliciosas que pueden ocupar tu información para realizar una suplantación de identidad o cualquier cosa mala.",
+    description:
+      "Configura tu privacidad para compartir solo lo que quieres, ten cuidado que compartes y donde lo compartes, ya que hay personas maliciosas que pueden ocupar tu información para realizar una suplantación de identidad o cualquier cosa mala.",
     ageGroup: ["jovenes", "adultos"],
     videoUrl: "https://www.youtube.com/embed/CXmjnNoDrTI",
   },
   {
     id: 4,
     title: "Cuidado con los Desconocidos Online",
-    description: "No confíes en extraños en internet, ¡protégete!, , no confies ni des información muy personal o privada a desconocidos, vamos a Jugar y probemos que tanto sabes sobre no dar información a desconocidos!",
+    description:
+      "No confíes en extraños en internet, ¡protégete!, , no confies ni des información muy personal o privada a desconocidos, vamos a Jugar y probemos que tanto sabes sobre no dar información a desconocidos!",
     ageGroup: ["niños", "jovenes"],
-
   },
   {
     id: 5,
     title: "Actualizaciones de Software",
-    description: "Mantén tus programas al día para evitar vulnerabilidades. Si los prgramas que usas en tu celular, no estan actualizados, puedes estar vulnerable antes ataques cibernéticos, por eso es importante que siempre tengas tus aplicaciones actualizadas.",
+    description:
+      "Mantén tus programas al día para evitar vulnerabilidades. Si los prgramas que usas en tu celular, no estan actualizados, puedes estar vulnerable antes ataques cibernéticos, por eso es importante que siempre tengas tus aplicaciones actualizadas.",
     ageGroup: ["jovenes", "adultos"],
     videoUrl: "https://www.youtube.com/embed/Dmgzt5xrRpM",
     graphic: "software-update-graphic",
@@ -48,7 +50,7 @@ export const topics = [
     title: "Backup de Información",
     description: "Guarda tus archivos importantes para no perderlos.",
     ageGroup: ["jovenes"],
-    videoUrl: "https://www.youtube.com/embed/s_J4-2e2222",
+    videoUrl: "https://www.youtube.com/embed/0OA8ZM6qofg",
     animation: "backup-animation",
     graphic: "backup-graphic",
   },
@@ -64,16 +66,18 @@ export const topics = [
   {
     id: 9,
     title: "Ingeniería Social",
-    description: "Entiende cómo los atacantes manipulan para obtener información. Hay que tener mucho cuidado con la información que compartimos, ya que los atacantes pueden usar técnicas de ingeniería social para manipular a las personas y obtener información sensible. Esto puede incluir correos electrónicos falsos, llamadas telefónicas engañosas o mensajes en redes sociales.",
+    description:
+      "Entiende cómo los atacantes manipulan para obtener información. Hay que tener mucho cuidado con la información que compartimos, ya que los atacantes pueden usar técnicas de ingeniería social para manipular a las personas y obtener información sensible. Esto puede incluir correos electrónicos falsos, llamadas telefónicas engañosas o mensajes en redes sociales.",
     ageGroup: ["jovenes", "adultos"],
-    videoUrl: "https://www.youtube.com/embed/PN0j35dbG-8",
+    videoUrl: "https://www.youtube.com/embed/UTy7JR2Z9qY",
     animation: "social-engineering-animation",
     graphic: "social-engineering-graphic",
   },
   {
     id: 10,
     title: "Autenticación de Dos Factores",
-    description: "Añade una capa extra de seguridad a tus cuentas. Tener una autenticación de dos pasos es importante ya que esto fortalece la seguridad en nuestras respectivas cuentas.",
+    description:
+      "Añade una capa extra de seguridad a tus cuentas. Tener una autenticación de dos pasos es importante ya que esto fortalece la seguridad en nuestras respectivas cuentas.",
     ageGroup: ["jovenes", "adultos"],
     videoUrl: "https://www.youtube.com/embed/yQnXTQ_GYzg",
     animation: "2fa-animation",
@@ -116,18 +120,19 @@ export const topics = [
   {
     id: 15,
     title: "Ransomware",
-    description: "Qué es y cómo protegerte de este tipo de ataque. Este Es un virus que entra en tu computadora y bloquea tus archivos o todo el sistema. Luego te piden dinero (un 'rescate') para recuperar el acceso. Es como si te pusieran un candado digital y te pidieran pagar para darte la llave. Para protegerte, lo mejor es tener tu antivirus actualizado y hacer copias de tus archivos importantes.",
+    description:
+      "Qué es y cómo protegerte de este tipo de ataque. Este Es un virus que entra en tu computadora y bloquea tus archivos o todo el sistema. Luego te piden dinero (un 'rescate') para recuperar el acceso. Es como si te pusieran un candado digital y te pidieran pagar para darte la llave. Para protegerte, lo mejor es tener tu antivirus actualizado y hacer copias de tus archivos importantes.",
     ageGroup: ["jovenes", "adultos"],
     videoUrl: "https://www.youtube.com/embed/NavnyirfwC8",
   },
   {
     id: 16,
     title: "Smishing y Vishing",
-    description: "Fraudes por SMS y llamadas telefónicas. Smishing y vishing son formas de engaño en las que los delincuentes intentan robar tu información personal: el smishing lo hace mediante mensajes de texto falsos, y el vishing a través de llamadas telefónicas que simulan ser de entidades confiables.",
+    description:
+      "Fraudes por SMS y llamadas telefónicas. Smishing y vishing son formas de engaño en las que los delincuentes intentan robar tu información personal: el smishing lo hace mediante mensajes de texto falsos, y el vishing a través de llamadas telefónicas que simulan ser de entidades confiables.",
     ageGroup: ["adultos"],
     videoUrl: "https://www.youtube.com/embed/t6k24MQFCsw",
     videoUrl1: "https://www.youtube.com/embed/a3hn1jfa29w",
-
   },
   {
     id: 17,
@@ -141,7 +146,8 @@ export const topics = [
   {
     id: 18,
     title: "Configuración de Privacidad en Apps",
-    description: "Revisa los permisos que das a tus aplicaciones. Miremos este video que nos instruye y nos recomienda como configurar nuestro celular android para que sea más seguro.",
+    description:
+      "Revisa los permisos que das a tus aplicaciones. Miremos este video que nos instruye y nos recomienda como configurar nuestro celular android para que sea más seguro.",
     ageGroup: ["jovenes", "adultos"],
     videoUrl: "https://www.youtube.com/embed/uZ7oRwH3Hjg",
     animation: "app-privacy-animation",
@@ -159,7 +165,8 @@ export const topics = [
   {
     id: 20,
     title: "Robo de Identidad",
-    description: "Cómo proteger tu identidad en el mundo digital. El robo de identidad es cuando una persona usa tu información personal, como tu nombre, número de cédula, cuentas bancarias o contraseñas, sin tu permiso, haciéndose pasar por ti. Lo hacen para abrir cuentas, hacer compras, pedir préstamos o cometer otros fraudes a tu nombre. Es como si alguien se pusiera una máscara con tu cara para aprovecharse de lo que tú tienes. Por eso, es muy importante cuidar bien tus datos, no compartirlos con desconocidos y tener cuidado con llamadas, mensajes o correos sospechosos.",
+    description:
+      "Cómo proteger tu identidad en el mundo digital. El robo de identidad es cuando una persona usa tu información personal, como tu nombre, número de cédula, cuentas bancarias o contraseñas, sin tu permiso, haciéndose pasar por ti. Lo hacen para abrir cuentas, hacer compras, pedir préstamos o cometer otros fraudes a tu nombre. Es como si alguien se pusiera una máscara con tu cara para aprovecharse de lo que tú tienes. Por eso, es muy importante cuidar bien tus datos, no compartirlos con desconocidos y tener cuidado con llamadas, mensajes o correos sospechosos.",
     ageGroup: ["jovenes", "adultos"],
     videoUrl: "https://www.youtube.com/embed/o65U3xTR3rc",
   },
@@ -182,7 +189,8 @@ export const topics = [
   {
     id: 23,
     title: "Navegación Segura",
-    description: "Identifica sitios web seguros y evita los peligrosos. Navegar por internet de forma segura significa usar el computador o el celular sin correr riesgos ni caer en engaños. Para hacerlo, es importante visitar solo páginas confiables las que empiezan con https no hacer clic en enlaces sospechosos ni descargar cosas de fuentes desconocidas. También se debe tener un buen antivirus, mantener el sistema actualizado y usar contraseñas seguras. Además, nunca se deben compartir datos personales en sitios que no sean oficiales. Así, puedes disfrutar de internet sin poner en peligro tu información ni tu equipo.",
+    description:
+      "Identifica sitios web seguros y evita los peligrosos. Navegar por internet de forma segura significa usar el computador o el celular sin correr riesgos ni caer en engaños. Para hacerlo, es importante visitar solo páginas confiables las que empiezan con https no hacer clic en enlaces sospechosos ni descargar cosas de fuentes desconocidas. También se debe tener un buen antivirus, mantener el sistema actualizado y usar contraseñas seguras. Además, nunca se deben compartir datos personales en sitios que no sean oficiales. Así, puedes disfrutar de internet sin poner en peligro tu información ni tu equipo.",
     ageGroup: ["niños", "jovenes", "adultos"],
     videoUrl: "https://www.youtube.com/embed/gOgHPSphMPE",
     animation: "safe-browsing-animation",
@@ -191,7 +199,8 @@ export const topics = [
   {
     id: 24,
     title: "Gestores de Contraseñas",
-    description: "Usa herramientas para recordar tus contraseñas de forma segura.",
+    description:
+      "Usa herramientas para recordar tus contraseñas de forma segura.",
     ageGroup: ["jovenes", "adultos"],
     animation: "password-manager-animation",
     graphic: "password-manager-graphic",
@@ -199,10 +208,10 @@ export const topics = [
   {
     id: 25,
     title: "Reconocer y evitar fraudes con tarjetas bancarias y pagos en línea",
-    description: "Este tema les enseña a identificar intentos de fraude relacionados con el uso de tarjetas de crédito o débito, cómo revisar sus movimientos bancarios, no compartir datos de la tarjeta por teléfono o internet, y usar métodos de pago seguros para proteger su dinero.",
+    description:
+      "Este tema les enseña a identificar intentos de fraude relacionados con el uso de tarjetas de crédito o débito, cómo revisar sus movimientos bancarios, no compartir datos de la tarjeta por teléfono o internet, y usar métodos de pago seguros para proteger su dinero.",
     ageGroup: ["adultos"],
     videoUrl: "https://www.youtube.com/embed/kDO9ILuSRlk",
-
   },
   {
     id: 26,
@@ -210,7 +219,6 @@ export const topics = [
     description: "Guía para padres sobre la seguridad de sus hijos en línea.",
     ageGroup: ["adultos"],
     videoUrl: "https://www.youtube.com/embed/x94vCNcsxgs",
-
   },
   {
     id: 27,
@@ -218,7 +226,6 @@ export const topics = [
     description: "Aprende a quién acudir si sufres un ataque.",
     ageGroup: ["adultos"],
     videoUrl: "https://www.youtube.com/embed/v4y8C4QAD0",
-
   },
   {
     id: 28,
