@@ -108,7 +108,7 @@ export const topics = [
     title: "Dispositivos IoT Seguros",
     description: "Protege tus dispositivos inteligentes conectados a internet.",
     ageGroup: ["jovenes"],
-    videoUrl: "https://www.youtube.com/embed/s_J4-2e2222",
+    videoUrl: "https://www.youtube.com/embed/04EdezH7BZM",
     animation: "iot-security-animation",
     graphic: "iot-security-graphic",
   },
