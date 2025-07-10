@@ -134,7 +134,7 @@ export const topics = [
     title: "Uso Responsable de la Tecnología",
     description: "Equilibrio entre el mundo digital y la vida real.",
     ageGroup: ["niños", "jovenes"],
-    videoUrl: "https://www.youtube.com/embed/s_J4-2e2222",
+    videoUrl: "https://www.youtube.com/embed/fxaMDQxLLx0",
     animation: "responsible-tech-animation",
     graphic: "responsible-tech-graphic",
   },
