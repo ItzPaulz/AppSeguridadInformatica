@@ -156,9 +156,6 @@ export const topics = [
     title: "Seguridad en Videojuegos",
     description: "Juega seguro y protege tu información en línea.",
     ageGroup: ["niños", "jovenes"],
-    videoUrl: "https://www.youtube.com/embed/s_J4-2e2222",
-    animation: "gaming-security-animation",
-    graphic: "gaming-security-graphic",
   },
   {
     id: 20,
