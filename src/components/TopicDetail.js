@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import MiniGamePassword from "./MiniGamePassword";
 import MiniGameStrangerDanger from "./MiniGameStrangerDanger";
 import CloudSecurityGames from "./CloudSecurityGame";
+import MiniGamePasswordManager from "./MiniGameManagerPassword";
 
 const TopicDetail = ({ topic, onBack }) => {
   const [iframeError, setIframeError] = useState(false);
@@ -18,7 +19,7 @@ const TopicDetail = ({ topic, onBack }) => {
   };
 
   const isKidTopic = topic.ageGroup.includes("niños");
-  const isYoungTopic = topic.id === 29 && topic.ageGroup.includes("jovenes");
+  const isYoungTopic = topic.ageGroup.includes("jovenes");
 
   return (
     <div className="fixed inset-0 bg-gray-900 bg-opacity-75 flex items-center justify-center p-4 z-50">
@@ -118,45 +119,43 @@ const TopicDetail = ({ topic, onBack }) => {
           </div>
         )}
 
-        {topic.animation &&
-          !(topic.id === 29 && topic.ageGroup.includes("jovenes")) && (
-            <div className="mb-6 p-4 bg-blue-50 rounded-xl text-center border border-blue-200 shadow-inner">
-              <h3 className="text-xl font-semibold text-blue-700 mb-2">
-                Animación Interactiva
-              </h3>
-              <p className="text-blue-600">
-                Aquí iría la animación de {topic.animation}.
-              </p>
-              {/* Placeholder para la animación */}
-              <div className="w-full h-32 bg-blue-200 rounded-lg flex items-center justify-center text-blue-800 text-sm mt-2 animate-pulse">
-                [Espacio para animación de {topic.animation}]
-              </div>
+        {topic.animation && !topic.ageGroup.includes("jovenes") && (
+          <div className="mb-6 p-4 bg-blue-50 rounded-xl text-center border border-blue-200 shadow-inner">
+            <h3 className="text-xl font-semibold text-blue-700 mb-2">
+              Animación Interactiva
+            </h3>
+            <p className="text-blue-600">
+              Aquí iría la animación de {topic.animation}.
+            </p>
+            {/* Placeholder para la animación */}
+            <div className="w-full h-32 bg-blue-200 rounded-lg flex items-center justify-center text-blue-800 text-sm mt-2 animate-pulse">
+              [Espacio para animación de {topic.animation}]
             </div>
-          )}
+          </div>
+        )}
 
-        {topic.graphic &&
-          !(topic.id === 29 && topic.ageGroup.includes("jovenes")) && (
-            <div className="mb-6 p-4 bg-green-50 rounded-xl text-center border border-green-200 shadow-inner">
-              <h3 className="text-xl font-semibold text-green-700 mb-2">
-                Gráfico Explicativo
-              </h3>
-              <p className="text-green-600">
-                Aquí iría el gráfico de {topic.graphic}.
-              </p>
-              {/* Mostrar imagen si es una URL válida */}
-              {topic.graphic.match(/\.(jpeg|jpg|gif|png|svg|webp)$/i) ? (
-                <img
-                  src={topic.graphic}
-                  alt="Gráfico explicativo"
-                  className="w-full max-h-64 object-contain rounded-lg mx-auto mt-2"
-                />
-              ) : (
-                <div className="w-full h-32 bg-green-200 rounded-lg flex items-center justify-center text-green-800 text-sm mt-2">
-                  [Espacio para gráfico de {topic.graphic}]
-                </div>
-              )}
-            </div>
-          )}
+        {topic.graphic && !topic.ageGroup.includes("jovenes") && (
+          <div className="mb-6 p-4 bg-green-50 rounded-xl text-center border border-green-200 shadow-inner">
+            <h3 className="text-xl font-semibold text-green-700 mb-2">
+              Gráfico Explicativo
+            </h3>
+            <p className="text-green-600">
+              Aquí iría el gráfico de {topic.graphic}.
+            </p>
+            {/* Mostrar imagen si es una URL válida */}
+            {topic.graphic.match(/\.(jpeg|jpg|gif|png|svg|webp)$/i) ? (
+              <img
+                src={topic.graphic}
+                alt="Gráfico explicativo"
+                className="w-full max-h-64 object-contain rounded-lg mx-auto mt-2"
+              />
+            ) : (
+              <div className="w-full h-32 bg-green-200 rounded-lg flex items-center justify-center text-green-800 text-sm mt-2">
+                [Espacio para gráfico de {topic.graphic}]
+              </div>
+            )}
+          </div>
+        )}
 
         {isKidTopic && (
           <div className="mt-8 p-4 bg-indigo-50 rounded-xl shadow-inner border border-indigo-200">
@@ -179,6 +178,9 @@ const TopicDetail = ({ topic, onBack }) => {
           <div className="mt-8 p-4 bg-indigo-50 rounded-xl shadow-inner border border-indigo-200">
             {topic.id === 29 && (
               <CloudSecurityGames onComplete={handleGameComplete} />
+            )}
+            {topic.id === 24 && (
+              <MiniGamePasswordManager onComplete={handleGameComplete} />
             )}
           </div>
         )}
