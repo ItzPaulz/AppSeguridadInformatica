@@ -142,10 +142,7 @@ const TopicDetail = ({ topic, onBack }) => {
             <h3 className="text-xl font-semibold text-green-700 mb-2">
               Gráfico Explicativo
             </h3>
-            <p className="text-green-600">
-              Aquí iría el gráfico de {topic.graphic}.
-            </p>
-            {/* Mostrar imagen si es una URL válida */}
+            {/* Elimina el mensaje verde, solo muestra la imagen si es una URL válida */}
             {topic.graphic.match(/\.(jpeg|jpg|gif|png|svg|webp)$/i) ? (
               <img
                 src={topic.graphic}
@@ -168,8 +165,10 @@ const TopicDetail = ({ topic, onBack }) => {
             {topic.id === 4 && (
               <MiniGameStrangerDanger onComplete={handleGameComplete} />
             )}
+            {/* Renderiza la actividad personalizada si existe */}
+            {topic.activity && <topic.activity />}
             {/* Agrega más minijuegos aquí según el topic.id */}
-            {![1, 4].includes(topic.id) && (
+            {![1, 4].includes(topic.id) && !(topic.id >= 31 && topic.id <= 39) && !topic.activity && (
               <p className="text-indigo-700 text-center">
                 ¡Pronto habrá un juego para este tema!
               </p>
