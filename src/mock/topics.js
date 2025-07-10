@@ -95,9 +95,6 @@ export const topics = [
     title: "Contenido Inapropiado",
     description: "Cómo identificar y reportar contenido dañino en internet.",
     ageGroup: ["niños", "jovenes"],
-    videoUrl: "https://www.youtube.com/embed/s_J4-2e2222",
-    animation: "inappropriate-content-animation",
-    graphic: "inappropriate-content-graphic",
   },
   {
     id: 13,

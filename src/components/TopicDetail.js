@@ -5,6 +5,7 @@ import CloudSecurityGame from "./CloudSecurityGame";
 import MiniGamePasswordManager from "./MiniGameManagerPassword";
 import MiniGameCyberbullying from "./MiniGameCyberbullying";
 import MiniGameVideoSecurity from "./MiniGameVideoSecurity";
+import MiniGameContentFlag from "./MiniGameContentFlag";
 
 const TopicDetail = ({ topic, onBack }) => {
   const [iframeError, setIframeError] = useState(false);
@@ -189,6 +190,9 @@ const TopicDetail = ({ topic, onBack }) => {
             )}
             {topic.id === 19 && (
               <MiniGameVideoSecurity onComplete={handleGameComplete} />
+            )}
+            {topic.id === 12 && (
+              <MiniGameContentFlag onComplete={handleGameComplete} />
             )}
           </div>
         )}
