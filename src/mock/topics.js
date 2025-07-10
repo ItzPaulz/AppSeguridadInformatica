@@ -241,7 +241,6 @@ export const topics = [
     title: "Seguridad en la Nube",
     description: "Protege tus datos almacenados en servicios en la nube.",
     ageGroup: ["jovenes"],
-    videoUrl: "https://www.youtube.com/embed/s_J4-2e2222",
     animation: "cloud-security-animation",
     graphic: "cloud-security-graphic",
   },
@@ -255,5 +254,3 @@ export const topics = [
     graphic: "netiquette-graphic",
   },
 ];
-
-// DONE
